@@ -1,5 +1,4 @@
 import { useState,useEffect } from "react";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Icon } from "./components/Icon";
 import changeColor from './utils/changeColor'
@@ -17,6 +16,7 @@ function App() {
     .then(response => response.json())
     .then(data => {
       console.log(data)
+      
       let color=colors[Math.floor(Math.random()*colors.length)];
       setColor(color);
       changeColor({
@@ -24,6 +24,7 @@ function App() {
       });
       setQuote(data.content)
       setAuthor(data.author)
+     
     }).catch(err=>{
       console.log(err)
       setQuote('Error fetching quote')
@@ -44,7 +45,7 @@ function App() {
         </p>
         <p id="author">- {author}</p>
         <div className="share">
-          <a id="tweet-quote" href="twitter.com/intent/tweet" target="_blank"> 
+          <a id="tweet-quote" href="https://twitter.com/intent/tweet" target="_blank"> 
             <Icon iconName="Twitter" color={color} size={30} />
           </a>
           <button id="new-quote" onClick={handleClick}>
