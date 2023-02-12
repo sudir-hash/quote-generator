@@ -1,0 +1,105 @@
+*{
+  transition: all 0.5s ease;
+}
+#root {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+}
+.App{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+}
+/* https://dev.to/murtuzaalisurti/setting-background-color-of-body-dynamically-in-react-38k5 */
+:root {
+  --bodyColor: "#000000";
+}
+.App {
+  background-color: var(--bodyColor);
+}
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+#quote-box {
+  margin: 0 auto;
+  width: 500px;
+  text-align: center;
+  padding: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  line-height: normal;
+  gap: 1em;
+  box-shadow:   0 0 1em #ccc;
+  background-color: white;
+}
+.share{
+ width: auto;
+ display: flex;
+ justify-content: space-between;
+}
+
+
+#text{
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: 0 !important;
+}
+button,a{
+  outline: none;
+  border: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0.5em;
+  border-radius: 5px;
+  box-shadow: 0 0 0.5em #ccc;
+}
